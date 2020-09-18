@@ -5,6 +5,10 @@ const useButtonStyles = createUseStyles({
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
   `,
 });
 

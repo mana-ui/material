@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "color": "^3.1.2",
     "react-jss": "^10.4.0"
   }
 }
