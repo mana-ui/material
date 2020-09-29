@@ -19,7 +19,6 @@ const useTabStyles = createUseStyles({
     const primaryColor = Color(primary);
       return ( {
       height: '100%',
-      width: '100%',
       fontSize: 14,
       fontWeight: 500,
       color: active ? primary : "rgba(0, 0, 0, .6)",
