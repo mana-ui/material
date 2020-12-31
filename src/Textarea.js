@@ -1,10 +1,9 @@
 import { createUseStyles } from "react-jss";
 
-const useInputStyles = createUseStyles({
+const useTextareaStyles = createUseStyles({
   wrapper: `
     position: relative;
     background-color: #f5f5f5;
-    height: 48px;
     display: flex;
     flex-direction: column;
     border-radius: 4px 4px 0 0;
@@ -15,16 +14,18 @@ const useInputStyles = createUseStyles({
       background: "transparent",
     },
   },
-  input: ({theme: {color: {primary}}}) => ( {
+  textarea: ({theme: {color: {primary}}}) => ( {
     width: "100%",
     height: "100%",
-    fontSize: '1rem',
+    fontSize: '16px',
+    fontFamily: 'Arial',
     fontWeight: 400,
     letterSpacing: '.009375em',
     alignSelf: 'flex-end',
     border: 0,
     borderBottom: `1px solid #ced4da`,
-    padding: '20px 16px 6px',
+    padding: '0 16px 6px',
+    marginTop: 20,
     outline: 0,
     caretColor: primary,
     "&:-webkit-autofill::first-line": {
@@ -52,7 +53,7 @@ const useInputStyles = createUseStyles({
     letterSpacing: ".009375em",
     position: "absolute",
     lineHeight: "1.15rem",
-    top: '50%',
+    top: 24,
     left: 16,
     color: "rgba(0,0,0,.6)",
     cursor: "text",
@@ -67,4 +68,4 @@ const useInputStyles = createUseStyles({
   }) },
 });
 
-export default useInputStyles;
+export default useTextareaStyles;
