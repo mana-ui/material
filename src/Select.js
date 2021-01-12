@@ -9,7 +9,6 @@ export const useSelectStyles = createUseStyles({
     display: flex;
     flex-direction: column;
     border-radius: 4px 4px 0 0;
-    cursor: pointer;
   `,
   "@keyframes autofill": {
     "0%, 100%": {
@@ -18,6 +17,7 @@ export const useSelectStyles = createUseStyles({
     },
   },
   selected: ({theme: {color: {primary}}}) => ( {
+    cursor: 'pointer',
     width: "100%",
     height: "100%",
     fontSize: '1rem',
@@ -67,11 +67,8 @@ export const useSelectStyles = createUseStyles({
     willChange: 'transform',
   }) },
   dropdown: {
-      position: 'absolute',
-      top: '100%',
+    width: '100%',
       background: '#fff',
-      left: 0,
-      right: 0,
       boxShadow: '0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12)',
       color: 'rgba(0,0,0,.87)',
       padding: '8px 0',
@@ -86,6 +83,7 @@ export const useListItemStyles = createUseStyles({
         height: 48,
         display: 'flex',
         alignItems: 'center',
+        cursor: 'pointer',
         '&:hover': {
             backgroundColor: Color('#000').fade(.96).string()
         }
