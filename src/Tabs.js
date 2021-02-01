@@ -32,7 +32,6 @@ const useTabStyles = createUseStyles({
   } ) },
   indicator: ({theme}) => ({
     position: 'absolute',
-    content: '""',
     bottom: 0,
     left: 0,
     right: 0,
