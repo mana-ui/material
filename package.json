@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "color": "^3.1.2",
+    "color": "^3.1.2"
+  },
+  "devDependencies": {
+    "react-jss": "^10.4.0"
+  },
+  "peerDependencies": {
     "react-jss": "^10.4.0"
   }
 }
