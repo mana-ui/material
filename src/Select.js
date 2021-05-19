@@ -17,6 +17,7 @@ export const useSelectStyles = createUseStyles({
     },
   },
   selected: ({theme: {color: {primary}}}) => ( {
+    boxSizing: 'border-box',
     cursor: 'pointer',
     width: "100%",
     height: "100%",
