@@ -75,6 +75,11 @@ export const useSelectStyles = createUseStyles({
       padding: '8px 0',
       zIndex: 8,
   },
+  suffix: {
+      position: 'absolute',
+      right: '1em',
+      bottom: 6,
+  }
 });
 
 export const useListItemStyles = createUseStyles({
