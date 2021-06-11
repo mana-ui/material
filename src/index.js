@@ -1,5 +1,5 @@
 export { default as useInputStyles } from './Input'
-export { default as useButtonStyles} from './Button'
+export { default as Button} from './Button'
 export * from './Tabs'
 export { default as useDataGridStyles} from './DataGrid'
 export { default as useDialogStyles} from './Dialog'
