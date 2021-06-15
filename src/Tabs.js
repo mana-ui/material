@@ -1,5 +1,7 @@
 import { createUseStyles } from "react-jss";
 import Color from "color";
+import styled from "@emotion/styled";
+import { Text } from "./Button";
 
 const useTabListStyles = createUseStyles({
   tabList: () => ( {
@@ -15,21 +17,6 @@ const useTabStyles = createUseStyles({
       overflow: 'visible',
     };
   },
-  button: ({active, theme: {color: {primary}}}) => {
-    const primaryColor = Color(primary);
-      return ( {
-      height: '100%',
-      fontSize: 14,
-      fontWeight: 500,
-      color: active ? primary : "rgba(0, 0, 0, .6)",
-      padding: "0 24px",
-      "&:hover": {
-        background: primaryColor.fade(0.96).string(),
-      },
-      "&:focus": {
-        background: primaryColor.fade(0.88).string(),
-      },
-  } ) },
   indicator: ({theme}) => ({
     position: 'absolute',
     bottom: 0,
@@ -58,4 +45,23 @@ const useTabPanelStyles = createUseStyles({
     }
 })
 
-export { useTabListStyles, useTabStyles, useTabPanelStyles, useTabPanelsStyles };
+const TabButton = styled(Text)({
+	height: '100%',
+	fontSize: 14,
+	fontWeight: 500,
+	padding: "0 24px",
+  }, ({active, theme: {color: {primary}}}) => {
+
+    const primaryColor = Color(primary);
+    return {
+      color: active ? primary : "rgba(0, 0, 0, .6)",
+      "&:hover": {
+        background: primaryColor.fade(0.96).string(),
+      },
+      "&:focus": {
+        background: primaryColor.fade(0.88).string(),
+      },
+    }
+  })
+
+export { useTabListStyles, useTabStyles, useTabPanelStyles, useTabPanelsStyles, TabButton };

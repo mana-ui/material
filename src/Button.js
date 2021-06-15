@@ -10,19 +10,30 @@ const Button = styled.button(
     background: "none",
     border: "none",
     outline: "none",
-    padding: "0 8px",
+    padding: "0 16px",
     height: "36px",
-    color: primary,
     borderRadius: "4px",
-    "&:hover": {
-      background: primaryColor.fade(0.96).string(),
-    },
+    color: '#fff'
   },
-  ({
-    theme: {
-      color: { primary },
-    },
-  }) => ({ color: primary, '&:hover': {background: Color(primary).fade(0.96).string()} })
+  (props) => {
+    const {
+      theme: {
+        color: { primary },
+      },
+    } = props;
+    return {
+	backgroundColor: primary,
+      "&:hover": { background: Color(primary).fade(0.08).string() },
+    };
+  }
 );
 
-export default Button;
+const Text = styled(Button)`
+  color: ${props => props.theme.color.primary};
+  background: none;
+  &:hover {
+	  background: ${props => Color(props.theme.color.primary).fade(0.96).string()}
+  }
+`
+
+export {Button, Text};
