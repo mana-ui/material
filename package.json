@@ -9,13 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@emotion/styled": "^11.3.0",
     "color": "^3.1.2"
   },
   "devDependencies": {
+    "@emotion/styled": "^11.3.0",
     "react-jss": "^10.4.0"
   },
   "peerDependencies": {
+    "@emotion/styled": "^11.3.0",
     "react-jss": "^10.4.0"
   }
 }
