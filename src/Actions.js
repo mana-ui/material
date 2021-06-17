@@ -6,7 +6,6 @@ const Actions = styled.div({
   alignItems: "center",
   justifyContent: "flex-end",
   minHeight: "52px",
-  borderTop: "1px solid rgba(0,0,0,.12)",
   "& > *": {
     marginLeft: "8px",
   },

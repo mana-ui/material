@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import { createUseStyles } from "react-jss";
 
 const useDataGridStyles = createUseStyles({
@@ -60,4 +61,12 @@ const useDataGridStyles = createUseStyles({
   `
 });
 
-export default useDataGridStyles;
+const Empty = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+`
+
+export {Empty,  useDataGridStyles };
