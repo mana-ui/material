@@ -36,4 +36,11 @@ const Text = styled(Button)`
   }
 `
 
-export {Button, Text};
+const Outlined = styled(Text)`
+  border-style: solid;
+  padding: 0 15px 0 15px;
+  border-width: 1px;
+  border-color: ${props => props.theme.color.primary}
+`
+
+export {Button, Text, Outlined};
