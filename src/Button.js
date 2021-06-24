@@ -13,7 +13,10 @@ const Button = styled.button(
     padding: "0 16px",
     height: "36px",
     borderRadius: "4px",
-    color: '#fff'
+    color: '#fff',
+		display: 'inline-flex',
+		alignItems: 'center',
+		justifyContent: 'center'
   },
   (props) => {
     const {
