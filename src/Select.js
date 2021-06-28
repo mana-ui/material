@@ -67,13 +67,15 @@ export const useSelectStyles = createUseStyles({
     transformOrigin: "left top",
     willChange: 'transform',
   }) },
-  dropdown: {
+	popRef: {
     width: '100%',
-      background: '#fff',
-      boxShadow: '0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12)',
+      zIndex: 8,
+	},
+  dropdown: {
+		background: '#fff',
+      boxShadow: '0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)',
       color: 'rgba(0,0,0,.87)',
       padding: '8px 0',
-      zIndex: 8,
   },
   suffix: {
       position: 'absolute',

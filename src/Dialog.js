@@ -1,4 +1,6 @@
+import styled from "@emotion/styled";
 import { createUseStyles } from "react-jss";
+import Actions from "./Actions";
 
 const useDialogStyles = createUseStyles({
   scrim: `
@@ -37,7 +39,15 @@ const useDialogStyles = createUseStyles({
     line-height: 1.5rem;
     font-weight: 400;
     letter-spacing: .03125em;
+		flex: 1;
+		overflow: hidden;
   `
 });
+
+export const DialogFooter = styled(Actions)`
+	padding: 8px 20px;
+	justify-content: flex-end;
+	border-top: 1px solid rgba(0,0,0,.12);
+`
 
 export default useDialogStyles;
