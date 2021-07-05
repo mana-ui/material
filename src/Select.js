@@ -16,38 +16,6 @@ export const useSelectStyles = createUseStyles({
       background: "transparent",
     },
   },
-  selected: ({theme: {color: {primary}}}) => ( {
-    boxSizing: 'border-box',
-    cursor: 'pointer',
-    width: "100%",
-    height: "100%",
-    fontSize: '1rem',
-    fontWeight: 400,
-    letterSpacing: '.009375em',
-    alignSelf: 'flex-end',
-    border: 0,
-    borderBottom: `1px solid #ced4da`,
-    padding: '20px 16px 6px',
-    outline: 0,
-    caretColor: primary,
-    "&:-webkit-autofill::first-line": {
-      fontSize: 16,
-      fontFamily: "Sans-Serif",
-    },
-    animationDelay: "1s" /* Safari support - any positive time runs instantly */,
-    animationName: "$autofill",
-    animationFillMode: "both",
-    "&:focus": {
-      borderBottom: `1px solid ${primary}`,
-      "& + label": {
-        color: primary,
-        transform: "translateY(-106%) scale(0.75)",
-      },
-    },
-    "&:-internal-autofill-selected + label": {
-      transform: "translateY(-106%) scale(0.75)",
-    },
-  } ),
   label: ({ active, focus, theme: {color: {primary}}}) => {
     return ({
     fontSize: '1rem',
