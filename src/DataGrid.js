@@ -31,9 +31,6 @@ const useDataGridStyles = createUseStyles({
     text-transform: inherit;
     `,
     headerTr: `background-color: inherit;`,
-  tr: `
-    border-top: 1px solid rgba(0,0,0,.12);
-  `,
     cell: `
     padding: 0 16px;
     -moz-osx-font-smoothing: grayscale;
