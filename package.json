@@ -1,6 +1,6 @@
 {
   "name": "@mana-ui/material",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "mana ui material theme",
   "main": "src/index.js",
   "scripts": {
