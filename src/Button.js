@@ -13,37 +13,46 @@ const Button = styled.button(
     padding: "0 16px",
     height: "36px",
     borderRadius: "4px",
-    color: '#fff',
-		display: 'inline-flex',
-		alignItems: 'center',
-		justifyContent: 'center'
+    color: "#fff",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   (props) => {
     const {
+			disabled,
       theme: {
         color: { primary },
       },
     } = props;
+		if (disabled) {
+			return {
+				backgroundColor: 'rgba(0,0,0,.12)',
+				color: 'rgba(0,0,0,.26)',
+				cursor: 'default'
+			}
+		}
     return {
-	backgroundColor: primary,
+      backgroundColor: primary,
       "&:hover": { background: Color(primary).fade(0.08).string() },
     };
   }
 );
 
 const Text = styled(Button)`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   background: none;
   &:hover {
-	  background: ${props => Color(props.theme.color.primary).fade(0.96).string()}
+    background: ${(props) =>
+      Color(props.theme.color.primary).fade(0.96).string()};
   }
-`
+`;
 
 const Outlined = styled(Text)`
   border-style: solid;
   padding: 0 15px 0 15px;
   border-width: 1px;
-  border-color: ${props => props.theme.color.primary};
-`
+  border-color: ${(props) => props.theme.color.primary};
+`;
 
-export {Button, Text, Outlined};
+export { Button, Text, Outlined };
