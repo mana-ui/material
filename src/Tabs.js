@@ -29,6 +29,7 @@ const useTabStyles = createUseStyles({
 
 const useTabPanelsStyles = createUseStyles({
     tabPanels: {
+			flex: 1,
         position: 'relative',
         overflow: 'hidden',
     },
