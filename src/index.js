@@ -1,4 +1,4 @@
-export { default as useInputStyles } from './Input'
+export * from './Input'
 export * from './Button'
 export * from './Tabs'
 export * from './DataGrid'

@@ -1,4 +1,6 @@
 import { createUseStyles } from "react-jss";
+import styled from '@emotion/styled'
+import {keyframes} from '@emotion/react'
 
 const useInputStyles = createUseStyles({
   wrapper: `
@@ -9,31 +11,59 @@ const useInputStyles = createUseStyles({
     flex-direction: column;
     border-radius: 4px 4px 0 0;
   `,
-  "@keyframes autofill": {
-    "0%, 100%": {
-      color: "#495057",
-      background: "transparent",
-    },
+});
+
+const Label = styled.label(({ active }) => {
+  return {
+    fontSize: "1rem",
+    fontWeight: 400,
+    letterSpacing: ".009375em",
+    position: "absolute",
+    lineHeight: "1.15rem",
+    top: "50%",
+    left: 16,
+    color: "rgba(0,0,0,.6)",
+    cursor: "text",
+    transform: active ? "translateY(-106%) scale(0.75)" : "translateY(-50%)",
+    transition:
+      "transform 0.15s cubic-bezier(.4,0,.2,1), color 0.15s cubic-bezier(.4,0,.2,1)",
+    transformOrigin: "left top",
+    willChange: "transform",
+    pointerEvents: "none",
+  };
+});
+
+const autofill = keyframes({
+  "0%, 100%": {
+    color: "#495057",
+    background: "transparent",
   },
-  input: ({theme: {color: {primary}}}) => ( {
-	  boxSizing: 'border-box',
+})
+
+const Input = styled.input(({
+    theme: {
+      color: { primary },
+    },
+  }) => ({
+    boxSizing: "border-box",
     width: "100%",
     height: "100%",
-    fontSize: '1rem',
+    fontSize: "1rem",
     fontWeight: 400,
-    letterSpacing: '.009375em',
-    alignSelf: 'flex-end',
+    letterSpacing: ".009375em",
+    alignSelf: "flex-end",
     border: 0,
     borderBottom: `1px solid #ced4da`,
-    padding: '20px 16px 6px',
+    padding: "20px 16px 6px",
     outline: 0,
     caretColor: primary,
     "&:-webkit-autofill::first-line": {
       fontSize: 16,
       fontFamily: "Sans-Serif",
     },
-    animationDelay: "1s" /* Safari support - any positive time runs instantly */,
-    animationName: "$autofill",
+    animationDelay:
+      "1s" /* Safari support - any positive time runs instantly */,
+    animationName: autofill,
     animationFillMode: "both",
     "&:focus": {
       borderBottom: `1px solid ${primary}`,
@@ -45,27 +75,6 @@ const useInputStyles = createUseStyles({
     "&:-internal-autofill-selected + label": {
       transform: "translateY(-106%) scale(0.75)",
     },
-  } ),
-  label: ({ active }) => {
-    return ({
-    fontSize: '1rem',
-    fontWeight: 400,
-    letterSpacing: ".009375em",
-    position: "absolute",
-    lineHeight: "1.15rem",
-    top: '50%',
-    left: 16,
-    color: "rgba(0,0,0,.6)",
-    cursor: "text",
-    transform: active
-      ? "translateY(-106%) scale(0.75)"
-      : "translateY(-50%)",
-    transition:
-      "transform 0.15s cubic-bezier(.4,0,.2,1), color 0.15s cubic-bezier(.4,0,.2,1)",
-    transformOrigin: "left top",
-    willChange: 'transform',
-    pointerEvents: 'none',
-  }) },
-});
+  }))
 
-export default useInputStyles;
+export {  useInputStyles, Label, Input };
