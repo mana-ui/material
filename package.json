@@ -16,7 +16,8 @@
     "react-jss": "^10.4.0"
   },
   "peerDependencies": {
-    "@emotion/styled": "^11.3.0",
-    "react-jss": "^10.4.0"
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react-jss": "*"
   }
 }
