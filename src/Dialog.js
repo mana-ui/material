@@ -25,6 +25,7 @@ const useDialogStyles = createUseStyles({
     background: #fff;
   `,
   title: `
+    margin: 16px 0;
     font-size: 1.25rem;
     line-height: 2rem;
     font-weight: 500;
